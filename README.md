@@ -19,6 +19,7 @@
 * Команда exit — выход из программы.
 </details>
 
+<details>
 <summary><span style="color:tomato;font-size:12px">Дополнительные источники</span></summary>
 
 <a href="https://stackoverflow.com/questions/21919277/how-to-create-a-vector-of-class-objects-in-c" style="margin-left:16px">How to create a vector of class objects in C++</a>
@@ -27,4 +28,5 @@
 
 <a href="https://www.geeksforgeeks.org/ways-copy-vector-c/" style="margin-left:16px">Ways to copy a vector in C++</a>
 
+</details>
 </details>
