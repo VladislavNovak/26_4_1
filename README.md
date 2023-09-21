@@ -1,7 +1,7 @@
-<details>
+<details open>
 <summary><span style="color:tomato;font-size:16px">CLASS</span></summary>
-<details>
-<summary><span style="color:tomato;font-size:16px">Реализация имитации аудиоплеера</span></summary>
+<details open>
+<summary><span style="color:tomato;font-size:12px">Реализация имитации аудиоплеера</span></summary>
 С помощью классов реализуйте программу имитации работы аудиоплеера. 
 В плеере находится несколько аудиозаписей, доступных для воспроизведения. 
 Для них вы должны создать отдельный класс Track. 
@@ -18,5 +18,13 @@
 * Команда stop прекращает воспроизведение текущей записи, если таковая имеется. Об этом выводится сообщение в консоль. Два раза остановить воспроизведение невозможно, так что команда должна срабатывать только в первом случае.
 * Команда exit — выход из программы.
 </details>
+
+<summary><span style="color:tomato;font-size:12px">Дополнительные источники</span></summary>
+
+<a href="https://stackoverflow.com/questions/21919277/how-to-create-a-vector-of-class-objects-in-c" style="margin-left:16px">How to create a vector of class objects in C++</a>
+
+<a href="https://www.geeksforgeeks.org/creating-a-vector-of-class-objects-in-cpp/" style="margin-left:16px">Creating a Vector of Class Objects in C++</a>
+
+<a href="https://www.geeksforgeeks.org/ways-copy-vector-c/" style="margin-left:16px">Ways to copy a vector in C++</a>
 
 </details>
