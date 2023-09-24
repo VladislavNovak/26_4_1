@@ -1,45 +1,14 @@
-#include <iostream>
-#include <iomanip>
-#include <sstream>
-#include <iterator>
-#include <limits>
 #include "utilities.h"
 
 int getRandomIntInRange(int from, int to) {
     return (from + std::rand() % (to - from + 1)); // NOLINT(cert-msc50-cpp)
 }
 
-std::stringstream convertStringsToSS(const std::vector<std::string> &strings) {
+std::stringstream convertStringsToSS(const std::vector<std::string> &data) {
     std::string delim = " ";
     std::stringstream ss;
-    std::copy(
-            strings.begin(),
-            strings.end(),
-            std::ostream_iterator<std::string>(ss, delim.c_str()));
-
+    std::copy(data.begin(), data.end(), std::ostream_iterator<std::string>(ss, delim.c_str()));
     return ss;
-}
-
-int putInput(int min) {
-    int input;
-
-    while (true) {
-        std::cin >> input;
-
-        if (std::cin.fail() || input < min) {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Input is invalid. Please try again:";
-            continue;
-        }
-
-        break;
-    }
-
-    std::cin.clear();
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-    return input;
 }
 
 std::time_t getRandomDate() {
@@ -53,7 +22,6 @@ std::time_t getRandomDate() {
     std::tm toParse = *localtime(&now);
     auto ss = convertStringsToSS(randoms);
     ss >> std::get_time(&toParse, "%Y %m %d");
-
     return mktime(&toParse);
 }
 
@@ -61,6 +29,27 @@ void reloadStream() {
     std::cin.clear();
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
+
+int putInput(int min) {
+    int input;
+
+    while (true) {
+        std::cin >> input;
+
+        if (std::cin.fail() || input < min) {
+            reloadStream();
+            std::cout << "Input is invalid. Please try again:";
+            continue;
+        }
+
+        break;
+    }
+
+    reloadStream();
+
+    return input;
+}
+
 
 time_t putTime(char timeType, time_t basisTime) {
     std::string fmtDate = { '%', timeType };

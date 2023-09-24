@@ -18,7 +18,7 @@ int main() {
 
     std::srand(std::time(nullptr)); // NOLINT(cert-msc51-cpp)
 
-    Player player;
+    Player player{};
 
     while(isPlayerMenuProcess) {
         std::cout << "--- Main menu ---" << std::endl;

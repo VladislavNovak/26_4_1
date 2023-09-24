@@ -2,6 +2,10 @@
 #define INC_26_4_1_UTILITIES_H
 
 #include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <iterator>
+#include <limits>
 #include <ctime>
 #include <vector>
 

@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <vector>
+#include <cassert>
+#include <vector>
 #include "track.h"
 
 using std::cout;
